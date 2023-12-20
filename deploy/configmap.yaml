@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: flask-app
+spec:
+  selector:
+    matchLabels:
+      app: flask-app
+data:
+  mkdir.sh: |
+    #!/bin/sh
+    mkdir -p ./.cache
